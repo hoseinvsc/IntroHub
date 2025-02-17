@@ -5,8 +5,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../node_modules/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="{% static build/style.css %}">
+    <link rel="stylesheet" href={% static "css/swiper-bundle.min.css" %}>
+    <link rel="stylesheet" href={% static "css/style.css" %}>
     <title>صفحه اصلی</title>
 
 </head>
@@ -67,7 +67,7 @@
                     </div>
                     <div class="flex items-center gap-8">
                         <div>
-                            <a href="index.html"><img src="../assets/images/logo.png" alt=""></a>
+                            <a href="index.html"><img src={% static "images/logo.png" %} alt=""></a>
                         </div>
                         <div class="hidden lg:block">
                             <ul class="flex gap-x-8">
@@ -127,10 +127,10 @@
         <div class="swiper mySwiper ">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <img class="object-cover w-full" src="../assets/images/slider-1.jpg" alt="">
+                    <img class="object-cover w-full" src={% static "images/slider-1.jpg" %} alt="">
                 </div>
                 <div class="swiper-slide">
-                    <img class="object-cover w-full" src="../assets/images/slider-2.jpg" alt="">
+                    <img class="object-cover w-full" src={% static "images/slider-2.jpg" %} alt="">
                 </div>
             </div>
             <div class="swiper-pagination"></div>
@@ -212,7 +212,7 @@
                         <div class="swiper-slide text-center group/proj cursor-pointer">
                             <div class="relative overflow-hidden bg-cover bg-no-repeat rounded-2xl">
                                 <a href="single-project.html">
-                                    <img class="relative" src="../assets/images/blog-1.jpg" alt="" srcset="">
+                                    <img class="relative" src={% static "images/blog-1.jpg" %} alt="" srcset="">
                                     <div
                                         class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-gradient-to-t from-slate-900 bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-70">
                                     </div>
@@ -227,7 +227,7 @@
                         <div class="swiper-slide text-center group/proj cursor-pointer">
                             <div class="relative overflow-hidden bg-cover bg-no-repeat rounded-2xl">
                                 <a href="single-project.html">
-                                    <img class="relative" src="../assets/images/blog-2.jpg" alt="" srcset="">
+                                    <img class="relative" src={% static "images/blog-2.jpg" %} alt="" srcset="">
                                     <div
                                         class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-gradient-to-t from-slate-900 bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-70">
                                     </div>
@@ -242,7 +242,7 @@
                         <div class="swiper-slide text-center group/proj cursor-pointer">
                             <div class="relative overflow-hidden bg-cover bg-no-repeat rounded-2xl">
                                 <a href="single-project.html">
-                                    <img class="relative" src="../assets/images/blog-3.jpg" alt="" srcset="">
+                                    <img class="relative" src={% static "images/blog-3.jpg" %} alt="" srcset="">
                                     <div
                                         class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-gradient-to-t from-slate-900 bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-70">
                                     </div>
@@ -257,7 +257,7 @@
                         <div class="swiper-slide text-center group/proj cursor-pointer">
                             <div class="relative overflow-hidden bg-cover bg-no-repeat rounded-2xl">
                                 <a href="single-project.html">
-                                    <img class="relative" src="../assets/images/blog-4.jpg" alt="" srcset="">
+                                    <img class="relative" src={% static "images/blog-4.jpg" %} alt="" srcset="">
                                     <div
                                         class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-gradient-to-t from-slate-900 bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-70">
                                     </div>
@@ -272,7 +272,7 @@
                         <div class="swiper-slide text-center group/proj cursor-pointer">
                             <div class="relative overflow-hidden bg-cover bg-no-repeat rounded-2xl">
                                 <a href="single-project.html">
-                                    <img class="relative" src="../assets/images/blog-5.jpg" alt="" srcset="">
+                                    <img class="relative" src={% static "images/blog-5.jpg" %} alt="" srcset="">
                                     <div
                                         class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-gradient-to-t from-slate-900 bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-70">
                                     </div>
@@ -287,7 +287,7 @@
                         <div class="swiper-slide text-center group/proj cursor-pointer">
                             <div class="relative overflow-hidden bg-cover bg-no-repeat rounded-2xl">
                                 <a href="single-project.html">
-                                    <img class="relative" src="../assets/images/blog-6.jpg" alt="" srcset="">
+                                    <img class="relative" src={% static "images/blog-6.jpg" %} alt="" srcset="">
                                     <div
                                         class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-gradient-to-t from-slate-900 bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-70">
                                     </div>
@@ -313,7 +313,7 @@
         <div class="container mx-auto max-w-screen-xl">
             <div class="grid grid-cols-12 gap-4">
                 <div class="col-span-12 md:col-span-4">
-                    <img class="rounded-2xl" src="../assets/images/54.jpg" alt="">
+                    <img class="rounded-2xl" src={% static "images/54.jpg" %} alt="">
                 </div>
                 <div class="col-span-12 md:col-span-8 leading-8">
                     <p class="mb-4">
@@ -352,7 +352,7 @@
                                 <div class="flex items-center justify-center mt-4">
                                     <div class="avatar ml-4">
                                         <div class="w-24 rounded-full">
-                                            <img src="../assets/images/avatar-3.jpg" />
+                                            <img src={% static "images/avatar-3.jpg" %} />
                                         </div>
                                     </div>
                                     <div class="flex flex-col items-center">
@@ -376,7 +376,7 @@
                                 <div class="flex items-center justify-center mt-4">
                                     <div class="avatar ml-4">
                                         <div class="w-24 rounded-full">
-                                            <img src="../assets/images/avatar-1.jpg" />
+                                            <img src={% static "images/avatar-1.jpg" %} />
                                         </div>
                                     </div>
                                     <div class="flex flex-col items-center">
@@ -400,7 +400,7 @@
                                 <div class="flex items-center justify-center mt-4">
                                     <div class="avatar ml-4">
                                         <div class="w-24 rounded-full">
-                                            <img src="../assets/images/avatar-2.jpg" />
+                                            <img src={% static "images/avatar-2.jpg" %} />
                                         </div>
                                     </div>
                                     <div class="flex flex-col items-center">
@@ -433,7 +433,7 @@
                             <a href="blog.html" class="absolute -bottom-4 bg-white p-2 rounded-lg shadow-lg">دسته بندی:
                                 کسب و کار</a>
                         </div>
-                        <a href="single-blog.html"><img src="../assets/images/blog-1.jpg" alt=""></a>
+                        <a href="single-blog.html"><img src={% static "images/blog-1.jpg" %} alt=""></a>
                     </div>
                     <div class="p-4 leading-8 w-full">
                         <a href="single-blog.html">
@@ -452,7 +452,7 @@
                             <a href="blog.html" class="absolute -bottom-4 bg-white p-2 rounded-lg shadow-lg">دسته بندی:
                                 مبلمان و دکور</a>
                         </div>
-                        <a href="single-blog.html"><img src="../assets/images/blog-6.jpg" alt=""></a>
+                        <a href="single-blog.html"><img src={% static "images/blog-6.jpg" %} alt=""></a>
                     </div>
                     <div class="p-4 leading-8 w-full">
                         <a href="single-blog.html">
@@ -470,7 +470,7 @@
                             <a href="blog.html" class="absolute -bottom-4 bg-white p-2 rounded-lg shadow-lg">دسته بندی:
                                 اکسسوری زیبا</a>
                         </div>
-                        <a href="single-blog.html"><img src="../assets/images/blog-7.jpg" alt=""></a>
+                        <a href="single-blog.html"><img src={% static "images/blog-7.jpg" %} alt=""></a>
                     </div>
                     <div class="p-4 leading-8 w-full">
                         <a href="single-blog.html">
@@ -489,7 +489,7 @@
                             <a href="blog.html" class="absolute -bottom-4 bg-white p-2 rounded-lg shadow-lg">دسته بندی:
                                 رنگ آمیزی</a>
                         </div>
-                        <a href="single-blog.html"><img src="../assets/images/blog-8.jpg" alt=""></a>
+                        <a href="single-blog.html"><img src={% static "images/blog-8.jpg" %} alt=""></a>
                     </div>
                     <div class="p-4 leading-8 w-full">
                         <a href="single-blog.html">
@@ -515,32 +515,32 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="flex justify-center">
-                            <img src="../assets/images/logo-1.png" alt="">
+                            <img src={% static "images/logo-1.png" %} alt="">
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="flex justify-center">
-                            <img src="../assets/images/logo-2.png" alt="">
+                            <img src={% static "images/logo-2.png" %} alt="">
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="flex justify-center">
-                            <img src="../assets/images/logo-3.png" alt="">
+                            <img src={% static "images/logo-3.png" %} alt="">
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="flex justify-center">
-                            <img src="../assets/images/logo-5.png" alt="">
+                            <img src={% static "images/logo-5.png" %} alt="">
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="flex justify-center">
-                            <img src="../assets/images/logo-6.png" alt="">
+                            <img src={% static "images/logo-6.png" %} alt="">
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="flex justify-center">
-                            <img src="../assets/images/logo-4.png" alt="">
+                            <img src={% static "images/logo-4.png" %} alt="">
                         </div>
                     </div>
 
@@ -553,7 +553,7 @@
         <div class="container mx-auto max-w-screen-xl">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-4 leading-8">
                 <div>
-                    <img class="mb-4" src="../assets/images/logo-footer.png" alt="">
+                    <img class="mb-4" src={% static "images/logo-footer.png" %} alt="">
                     <p>
                         لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است،
                         چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است،
@@ -604,8 +604,8 @@
         </div>
     </footer>
 
-    <script src="../node_modules/swiper/swiper-bundle.min.js"></script>
-    <script src="../src/js/main.js"></script>
+    <script src={% static "js/swiper-bundle.min.js" %}></script>
+    <script src={% static "js/main.js" %}></script>
 </body>
 
 </html>
