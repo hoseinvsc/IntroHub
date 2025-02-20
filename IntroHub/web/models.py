@@ -11,11 +11,19 @@ class Product(models.Model):
     
     def __str__(self):
         return self.name
-    
+
+    @property
+    def get_first_image(self):
+        images_list = self.product_images.all()
+        if images_list.exists():
+            
+            return images_list.first().image.url    
+        return None
+
 
 class ProductImage(models.Model):
-    image = models.ImageField(upload_to='images')
-    product = models.ForeignKey(Product,on_delete=models.PROTECT)
+    image = models.ImageField(upload_to='images',help_text='image size must be 1024*614 pixel')
+    product = models.ForeignKey(Product,on_delete=models.PROTECT,related_name='product_images')
 
     def __str__(self):
         return f'image of {self.product.name} {self.id}'
