@@ -17,6 +17,12 @@ class ProductImage(models.Model):
     image = models.ImageField(upload_to='images')
     product = models.ForeignKey(Product,on_delete=models.PROTECT)
 
+    def __str__(self):
+        return f'image of {self.product.name} {self.id}'
 
 class Category(models.Model):
     title = models.CharField(max_length=24)
+
+    def __str__(self):
+        return self.title
+    
