@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,get_object_or_404
 from .models import Customer, Product
 
 def home(request):
@@ -9,7 +9,7 @@ def home(request):
     return render(request, 'home.html', context)
 
 def product_detail(request, id):
-    product = Product.objects.filter(id=id).first()
+    product = get_object_or_404(Product, id=id)
     return render(request, 'product_detail.html', {'product': product})
 
 def about(request):
