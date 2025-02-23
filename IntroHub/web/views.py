@@ -8,6 +8,10 @@ def home(request):
     context = {'products': products,"customers":customers}
     return render(request, 'home.html', context)
 
+def product_detail(request, id):
+    product = Product.objects.filter(id=id).first()
+    return render(request, 'product_detail.html', {'product': product})
+
 def about(request):
     return render(request, 'about.html')
 
