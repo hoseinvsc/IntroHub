@@ -1,9 +1,11 @@
 from django.shortcuts import render
-from .models import Product
+from .models import Customer, Product
 
 def home(request):
     products = Product.objects.all()
-    context = {'products': products,}
+    customers = Customer.objects.all()
+    print(products)
+    context = {'products': products,"customers":customers}
     return render(request, 'home.html', context)
 
 def about(request):

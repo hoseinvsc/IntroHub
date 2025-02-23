@@ -34,3 +34,21 @@ class Category(models.Model):
     def __str__(self):
         return self.title
     
+
+
+
+
+
+class Customer(models.Model):
+    CUSTOMER_TYPES = [('i', 'شخص'),('company', 'شرکت/سازمان')]
+    name = models.CharField( max_length=200, verbose_name="نام شخص/سازمان")
+    customer_type = models.CharField( max_length=20, choices=CUSTOMER_TYPES, default='i',verbose_name="نوع مشتری")
+    phone = models.CharField( max_length=11, verbose_name="شماره تماس")
+    address = models.TextField(verbose_name="آدرس")
+    image = models.ImageField(upload_to='images/customer', null = True ,help_text= 'image size must be 142 * 41')
+    class Meta:
+        verbose_name = "مشتری"
+        verbose_name_plural = "مشتریان"
+    
+    def __str__(self):
+        return self.name
