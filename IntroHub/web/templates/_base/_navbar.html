@@ -1,0 +1,74 @@
+{% load static %}
+
+<div class="container mx-auto max-w-screen-xl relative">
+    <div class="p-6 md:absolute bg-white rounded-2xl left-3 top-3 right-3 z-10">
+        <div class="flex justify-between items-center">
+            <div class="lg:hidden leading-none">
+                <div class="drawer drawer-end z-10">
+                    <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
+                    <div class="drawer-content">
+                        <label for="my-drawer-4" class="swap swap-rotate drawer-button">
+
+                            <!-- this hidden checkbox controls the state -->
+                            <input type="checkbox" />
+
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor"
+                                class="w-6 h-6 stroke-black swap-off fill-current">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor"
+                                class="w-6 h-6 stroke-black swap-on fill-current">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+
+                        </label>
+                    </div>
+                    <div class="drawer-side" style="justify-items: start;">
+                        <label for="my-drawer-4" class="drawer-overlay"></label>
+                        <ul class="menu p-4 w-80 h-full bg-base-200 text-base-content">
+                            <div class="drawer-content text-left">
+                                <label for="my-drawer-4" class="swap swap-rotate drawer-button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                </label>
+                            </div>
+                            <li><a href="/">صفحه اصلی</a></li>
+                            <li><a href="/">خدمات ما</a></li>
+                            <li><a href=""> محصولات</a></li>
+
+                            <li><a href="">وبلاگ</a></li>
+                            <li><a href="">درباره ما</a></li>
+                            <li><a href="">تماس با ما</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center gap-8">
+                <div>
+                    <a href="/"><img src={% static "images/logo.png" %} alt=""></a>
+                </div>
+                <div class="hidden lg:block">
+                    <ul class="flex gap-x-8">
+                        <li><a href="/">صفحه اصلی</a></li>
+                        <li><a href="">خدمات ما</a></li>
+                        <li><a href="">محصولات</a></li>
+
+                        <li><a href="">وبلاگ</a></li>
+                        <li><a href="">درباره ما</a></li>
+                        <li><a href="">تماس با ما</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
