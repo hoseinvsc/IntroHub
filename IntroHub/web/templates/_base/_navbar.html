@@ -40,12 +40,11 @@
                                 </label>
                             </div>
                             <li><a href="/">صفحه اصلی</a></li>
-                            <li><a href="/">خدمات ما</a></li>
-                            <li><a href=""> محصولات</a></li>
+                            <li><a href="{% url 'products' %}">محصولات</a></li>
 
-                            <li><a href="">وبلاگ</a></li>
-                            <li><a href="">درباره ما</a></li>
-                            <li><a href="">تماس با ما</a></li>
+                            <li><a href="{% url 'blog' %}">وبلاگ</a></li>
+                            <li><a href="{% url 'about' %}">درباره ما</a></li>
+                            <li><a href="{% url 'contact' %}">تماس با ما</a></li>
 
                         </ul>
                     </div>
@@ -53,22 +52,19 @@
             </div>
             <div class="flex items-center gap-8">
                 <div>
-                    <a href="/"><img src={% static "images/logo.png" %} alt=""></a>
+                    <a href="/"><img src="{% static 'images/logo.png' %}" alt="Logo"></a>
                 </div>
                 <div class="hidden lg:block">
                     <ul class="flex gap-x-8">
                         <li><a href="/">صفحه اصلی</a></li>
-                        <li><a href="">خدمات ما</a></li>
-                        <li><a href="">محصولات</a></li>
+                        <li><a href="{% url 'products' %}">محصولات</a></li> 
 
-                        <li><a href="">وبلاگ</a></li>
-                        <li><a href="">درباره ما</a></li>
-                        <li><a href="">تماس با ما</a></li>
+                        <li><a href="{% url 'blog' %}">وبلاگ</a></li> 
+                        <li><a href="{% url 'about' %}">درباره ما</a></li> 
+                        <li><a href="{% url 'contact' %}">تماس با ما</a></li>
                     </ul>
                 </div>
             </div>
-
-
         </div>
     </div>
 </div>

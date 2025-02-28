@@ -12,11 +12,18 @@ def product_detail(request, id):
     product = get_object_or_404(Product, id=id)
     return render(request, 'product_detail.html', {'product': product})
 
+def products(request):
+    all_products = Product.objects.all()
+    return render(request, 'products.html', {'products': all_products})
+
 def about(request):
     return render(request, 'about.html')
 
-def connect(request):
-    return render(request, 'connect.html')
+def contact(request):
+    return render(request, 'contact.html')
 
 def product(request):
     return render(request, 'product.html')
+
+def blog(request):
+    return render(request, 'blog.html')

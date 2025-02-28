@@ -1,0 +1,37 @@
+{% extends '_base/_base.html' %}
+{% load static %}
+
+{% block page_title %}
+    <title>تماس با ما</title>
+{% endblock %}
+
+{% block main %}
+    {% include '_base/_navbar.html' %}
+
+    <section class="mb-20 px-4">
+        <div class="container mx-auto max-w-screen-xl">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div>
+                    <h3 class="text-xl font-YekanBakh-ExtraBold mb-2">راه های ارتباطی ...</h3>
+                    <div class="bg-white p-4 rounded-2xl flex items-center gap-4 my-4">
+                        <div class="bg-yellow-400 p-2 rounded-xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-white">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-base font-YekanBakh-ExtraBold mb-2">آدرس:</h3>
+                            <p> تهران، خیابان، کوچه، فرعی 2</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include '_base/_footer.html' %}
+{% endblock %}
