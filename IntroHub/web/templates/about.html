@@ -6,12 +6,31 @@
 {% endblock %}
 
 {% block main %}
-    {% include '_base/_navbar.html' %}
+    <section class="mb-8 bg-white md:bg-transparent">
+        <div class="container mx-auto max-w-screen-xl relative">
+            {% include '_base/_navbar.html' %}
+        </div>
+
+        <div class="bg-[url('/assets/images/ber.jpg')] bg-no-repeat h-40 md:h-64 relative">
+            <div class="flex justify-center">
+                <div class="text-sm absolute top-1/4 md:top-1/2">
+                    <h2 class="text-3xl font-YekanBakh-ExtraBlack my-4">درباره ما</h2>
+
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section class="mb-20 px-4">
         <div class="container mx-auto max-w-screen-xl">
-            <h1>درباره ما</h1>
-            <p>ما یک گروه ....</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="leading-8 mb-8">
+                    <h3 class="text-xl font-YekanBakh-ExtraBold mb-2"> ما یک گروه ....</h3>
+                </div>
+                <div>
+                    <img class="rounded-2xl" src="{% static 'assets/images/about.jpg' %}" alt="">
+                </div>
+            </div>
         </div>
     </section>
 

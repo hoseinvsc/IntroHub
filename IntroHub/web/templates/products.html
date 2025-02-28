@@ -8,6 +8,19 @@
 {% block main %}
     {% include '_base/_navbar.html' %}
 
+    <section class="mb-8 bg-white md:bg-transparent">
+        <div class="container mx-auto max-w-screen-xl relative">
+            <div class="bg-[url('/assets/images/ber.jpg')] bg-no-repeat h-40 md:h-64 relative">
+                <div class="flex justify-center">
+                    <div class="text-sm absolute top-1/4 md:top-1/2">
+                        <h2 class="text-3xl font-YekanBakh-ExtraBlack my-4">محصولات</h2>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="mb-20 px-4">
         <div class="container mx-auto max-w-screen-xl">
             <div class="container mx-auto max-w-screen-xl">
@@ -16,19 +29,16 @@
                     <div class="swiper-slide text-center group/proj cursor-pointer">
                         <div class="relative overflow-hidden bg-cover bg-no-repeat rounded-2xl">
                             <a href="{% url 'product_detail' id=product.id %}">
-
                                 {% if product.get_first_image %}
                                     <img class="relative" src="{{ product.get_first_image }}" alt="{{ product.name }}">
                                 {% else %}
                                     <img class="relative" src="{% static 'images/default-image.jpg' %}" alt="Default Image">
                                 {% endif %}
-                                <div
-                                    class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-gradient-to-t from-slate-900 bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-70">
+                                <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-gradient-to-t from-slate-900 bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-70">
                                 </div>
                             </a>
                         </div>
-                        <figcaption
-                            class="absolute bottom-2 w-full invisible group-hover/proj:visible transition ease-in duration-1000 group-hover/proj:transition-all group-hover/proj:-translate-y-4 group-hover/proj:duration-1000 group-hover/proj:text-white">
+                        <figcaption class="absolute bottom-2 w-full invisible group-hover/proj:visible transition ease-in duration-1000 group-hover/proj:transition-all group-hover/proj:-translate-y-4 group-hover/proj:duration-1000 group-hover/proj:text-white">
                             <h3 class="font-YekanBakh-Bold text-sm">{{ product.name }}</h3>
                             <p class="">جهت مشاهده مطالب کلیک کنید</p>
                         </figcaption>
