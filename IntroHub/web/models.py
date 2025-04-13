@@ -52,3 +52,16 @@ class Customer(models.Model):
     
     def __str__(self):
         return self.name
+    
+
+
+class Blog(models.Model):
+    title = models.CharField(max_length=200, verbose_name="عنوان")
+    summary = models.TextField(verbose_name="خلاصه")
+    description = models.TextField(verbose_name="شرح", default='No description')  # مقدار پیش‌فرض
+    cover = models.ImageField(upload_to='images/', verbose_name="عکس کاور", blank=True, null=True)
+    is_active = models.BooleanField(default=True, verbose_name="فعال / غیرفعال")
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title

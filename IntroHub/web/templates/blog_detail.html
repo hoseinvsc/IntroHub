@@ -1,0 +1,47 @@
+{% extends '_base/_base.html' %}
+{% load static %}
+{% load humanize %}
+
+{% block page_title %}
+<title>{{ post.title }}</title>
+{% endblock %}
+
+{% block main %}
+{% include '_base/_navbar.html' %}
+
+<section class="mb-20 px-4">
+    <div class="container mx-auto max-w-screen-xl">
+        <div class="grid grid-cols-12 gap-4">
+            <div class="col-span-12 md:col-span-9 order-1 md:order-2">
+                <div class="bg-white p-4 rounded-2xl leading-8">
+                    <div class="border-r-4 bg-slate-100 border-yellow-400 mb-4 rounded-2xl p-4">
+                        <h1 class="mb-2 text-base font-YekanBakh-Bold">{{ post.title }}</h1>
+                        <div class="flex items-center gap-4 text-xs text-gray-500">
+                            <span class="flex items-center gap-1">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                {{ post.created_at|date:"j F Y" }}
+                            </span>
+                        </div>
+                    </div>
+                    {% if post.cover %}
+                        <img class="rounded-2xl w-full" src="{{ post.cover.url }}" alt="{{ post.title }}">
+                    {% endif %}
+                    <p class="mt-4 text-justify leading-8 text-gray-700">
+                        {{ post.description|linebreaks }}
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-span-12 md:col-span-3 order-2 md:order-1">
+                <div class="bg-white p-4 rounded-2xl mb-4 leading-8">
+                    <div class="border-r-4 bg-slate-100 border-yellow-400 mb-4 rounded-2xl p-4">
+                        <h3 class="font-YekanBakh-Bold text-slate-800 text-base">مطالب مرتبط</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% include '_base/_footer.html' %}
+{% endblock %}

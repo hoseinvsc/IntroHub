@@ -1,5 +1,5 @@
 from django.shortcuts import render,get_object_or_404
-from .models import Customer, Product
+from .models import Customer, Product , Blog
 
 def home(request):
     products = Product.objects.all()
@@ -26,4 +26,9 @@ def product(request):
     return render(request, 'product.html')
 
 def blog(request):
-    return render(request, 'blog.html')
+    posts = Blog.objects.filter(is_active=True).order_by('-created_at')
+    return render(request, 'blog.html', {'posts': posts})
+
+def blog_detail(request, id):
+    post = get_object_or_404(Blog, id=id)
+    return render(request, 'blog_detail.html', {'post': post})
